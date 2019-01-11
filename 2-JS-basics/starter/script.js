@@ -72,26 +72,29 @@ console.log(firstName + ' ' + lastName)
   
   */
 
-var firstName = 'John'
-var age = 22
+// var firstName = 'John'
+// var age = 22
 
-var drink = age >= 21 ? 'Beer' : 'Juice'
-console.log(drink)
+// var drink = age >= 21 ? 'Beer' : 'Juice'
+// console.log(drink)
 
-// Switch Statement
-var job = 'teacher'
-switch (job) {
-  case 'teacher':
-  case 'instructor':
-    console.log(firstName + ' teaches kids how to code.')
-    break
-  case 'driver':
-    console.log(firstName + ' drives an uber in Lisbon.')
-    break
-    case 'designer':
-      console.log(firstName + ' designs beautiful websites.')
-      break
-    default:
-      console.log(firstName + ' does something else.')
+// // Switch Statement
+// var job = 'teacher'
+// switch (job) {
+//   case 'teacher':
+//   case 'instructor':
+//     console.log(firstName + ' teaches kids how to code.')
+//     break
+//   case 'driver':
+//     console.log(firstName + ' drives an uber in Lisbon.')
+//     break
+//     case 'designer':
+//       console.log(firstName + ' designs beautiful websites.')
+//       break
+//     default:
+//       console.log(firstName + ' does something else.')
 
-}
+// }
+
+// Initialize new array
+var names = ['John', 'Ben', 'Mary']
