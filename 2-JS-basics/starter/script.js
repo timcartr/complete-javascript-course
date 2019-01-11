@@ -23,6 +23,7 @@ var _3years = 3
 var threeYears = 3
 */
 
+/*********
 var firstName = 'John'
 var age = 28
 
@@ -43,3 +44,12 @@ alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + is
 
 var lastName = prompt('What is his last name?')
 console.log(firstName + ' ' + lastName)
+ */
+
+ var now, ageJohn, ageMark, yearJohn, yearMark
+ now = 2018
+ ageJohn = 28
+ ageMark = 33
+ yearJohn = now - ageJohn
+ yearMark = now - ageMark
+
