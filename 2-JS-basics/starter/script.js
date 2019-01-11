@@ -46,10 +46,25 @@ var lastName = prompt('What is his last name?')
 console.log(firstName + ' ' + lastName)
  */
 
- var now, ageJohn, ageMark, yearJohn, yearMark
- now = 2018
- ageJohn = 28
- ageMark = 33
- yearJohn = now - ageJohn
- yearMark = now - ageMark
+
+ /*********\
+  * 
+  var now, ageJohn, ageMark, yearJohn, yearMark
+  now = 2018
+  ageJohn = 28
+  ageMark = 33
+  yearJohn = now - ageJohn
+  yearMark = now - ageMark
+*/
+
+/********************
+ * Operator Precedence and Associativity
+ * Look at Moz chart for values of each operator
+ */
+
+ var now = 2018
+ var yearJohn = 1989
+ var fullAge = 18
+
+ var isFullAge = now - yearJohn >= fullAge
 
