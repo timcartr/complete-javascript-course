@@ -62,9 +62,36 @@ console.log(firstName + ' ' + lastName)
  * Look at Moz chart for values of each operator
  */
 
- var now = 2018
- var yearJohn = 1989
- var fullAge = 18
+ /*** 
+  * 
+  var now = 2018
+  var yearJohn = 1989
+  var fullAge = 18
+  
+  var isFullAge = now - yearJohn >= fullAge
+  
+  */
 
- var isFullAge = now - yearJohn >= fullAge
+var firstName = 'John'
+var age = 22
 
+var drink = age >= 21 ? 'Beer' : 'Juice'
+console.log(drink)
+
+// Switch Statement
+var job = 'teacher'
+switch (job) {
+  case 'teacher':
+  case 'instructor':
+    console.log(firstName + ' teaches kids how to code.')
+    break
+  case 'driver':
+    console.log(firstName + ' drives an uber in Lisbon.')
+    break
+    case 'designer':
+      console.log(firstName + ' designs beautiful websites.')
+      break
+    default:
+      console.log(firstName + ' does something else.')
+
+}

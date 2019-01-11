@@ -10,4 +10,4 @@ bmiMark = markMass / markHeight^2
 bmiJohn = johnMass / johnHeight^2
 
 var markHigherBMI = bmiMark > bmiJohn
-console.log(markHigherBMI)
+// console.log(markHigherBMI)
