@@ -1,17 +1,8 @@
-/*
-GAME RULES:
-
-- The game has 2 players, playing in rounds
-- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
-- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
-- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
-- The first player to reach 100 points on GLOBAL score wins the game
-
-*/
-
 var scores, roundScore, activePlayer, gamePlaying
 
 init()
+
+var prevRoll
 
 /******** Initialize Game */
 function init(){
@@ -41,7 +32,6 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
   if(gamePlaying){
     // 1. Random number
     var dice = Math.floor(Math.random() * 6) + 1
-    prevRoll = dice
 
     // Display the result
     var diceDOM = document.querySelector('.dice')
@@ -49,7 +39,12 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     diceDOM.src= 'dice-' + dice + '.png'
   
     // 3. Update the round score IF the rolled number was NOT a 1
-    if(dice !== 1) {
+    if(dice === 6 && prevRoll === 6) {
+      // Player rolls two 6, lose ALL score
+      scores[activePlayer] = 0
+      document.querySelector('#score-' + activePlayer).textContent = 0
+      nextPlayer()
+  } else if(dice !== 1) {
       // Add Score
       roundScore += dice
       document.querySelector('#current-' + activePlayer).textContent = roundScore
@@ -57,6 +52,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
       // Move to the next player
       nextPlayer()
     }
+    prevRoll = dice
   }
 
   // 4. If player rolls two 6 in a row, lose ALL points
